@@ -1,0 +1,30 @@
+@media (max-width: 640px) {
+  :root {
+    --shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+  }
+
+  body {
+    background: linear-gradient(135deg, #050505 0%, #191714 55%, #3b2209 100%);
+  }
+
+  body::before {
+    display: none;
+  }
+
+  .site-header,
+  .hero-stamp {
+    backdrop-filter: none;
+  }
+
+  .hero-media,
+  .service-card,
+  .product-tile,
+  .testimonial,
+  .journal-card,
+  .step,
+  .contact-panel,
+  .price-note,
+  .about-stat {
+    box-shadow: none;
+  }
+}
