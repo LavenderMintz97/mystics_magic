@@ -68,4 +68,3 @@ User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://mystics-magic.pages.dev/sitemap.xml
-LLMs: https://mystics-magic.pages.dev/llms.txt
