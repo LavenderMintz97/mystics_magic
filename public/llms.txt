@@ -4,14 +4,14 @@
 
 ## Site
 
-- Home: https://mystics-magic.pages.dev/
-- Services: https://mystics-magic.pages.dev/services/
-- Booking: https://mystics-magic.pages.dev/booking/
-- Digital Shop: https://mystics-magic.pages.dev/shop/
-- Journal: https://mystics-magic.pages.dev/resources/
-- About: https://mystics-magic.pages.dev/about/
-- Testimonials: https://mystics-magic.pages.dev/testimonials/
-- Contact: https://mystics-magic.pages.dev/contact/
+- [Home](https://mystics-magic.pages.dev/)
+- [Services](https://mystics-magic.pages.dev/services/)
+- [Booking](https://mystics-magic.pages.dev/booking/)
+- [Digital Shop](https://mystics-magic.pages.dev/shop/)
+- [Journal](https://mystics-magic.pages.dev/resources/)
+- [About](https://mystics-magic.pages.dev/about/)
+- [Testimonials](https://mystics-magic.pages.dev/testimonials/)
+- [Contact](https://mystics-magic.pages.dev/contact/)
 
 ## Services
 
