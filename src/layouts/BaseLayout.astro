@@ -25,7 +25,7 @@ const {
 
 const siteUrl = "https://mystics-magic.pages.dev";
 const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
-const socialImage = new URL("/images/mystic-consultation-hero.svg", siteUrl).toString();
+const socialImage = new URL("/images/tarot-hero-4k.jpg", siteUrl).toString();
 const robotsContent = noindex ? "noindex, follow" : "index, follow, max-image-preview:large";
 const cleanSegments = canonicalPath
   .replace(/^\/|\/$/g, "")
@@ -121,6 +121,7 @@ const schemaGraph = [...baseSchema, ...extraSchema.filter(Boolean)];
     <meta name="googlebot" content={robotsContent} />
     <meta name="bingbot" content={robotsContent} />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="preload" as="image" href="/images/tarot-hero-4k.jpg" imagesrcset="/images/tarot-hero-4k.jpg" />
     <meta property="og:site_name" content="Mystics Magic" />
     <meta property="og:type" content={pageType} />
     <meta property="og:title" content={title} />

@@ -337,7 +337,7 @@ h3 {
   border-radius: 999px 999px 8px 8px;
   background:
     linear-gradient(rgba(17, 17, 17, 0.08), rgba(17, 17, 17, 0.52)),
-    url("/images/mystic-consultation-hero.svg") center / cover;
+    url("/images/tarot-hero-4k.jpg") center / cover;
   box-shadow: var(--shadow);
 }
 
@@ -529,7 +529,7 @@ h3 {
   background:
     radial-gradient(circle at 72% 26%, rgba(240, 206, 104, 0.36), transparent 4rem),
     linear-gradient(135deg, rgba(40, 69, 111, 0.92), rgba(139, 5, 9, 0.88)),
-    url("/images/mystic-consultation-hero.svg") center / cover;
+    url("/images/tarot-hero-4k.jpg") center / cover;
   background-blend-mode: screen, multiply, normal;
 }
 
