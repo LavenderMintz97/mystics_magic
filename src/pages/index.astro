@@ -24,7 +24,17 @@ import { serviceItemListSchema } from "../data/seo";
       </div>
     </div>
     <div class="hero-media">
-      <img src="/images/tarot-hero-4k.jpg" width="3840" height="2160" alt="Gold tarot cards, crystals, candlelight, and a crescent moon arranged for a mystical tarot reading" />
+      <img
+        src="/images/tarot-hero-1600.jpg"
+        srcset="/images/tarot-hero-960.jpg 960w, /images/tarot-hero-1600.jpg 1600w, /images/tarot-hero-2400.jpg 2400w, /images/tarot-hero-4k.jpg 3840w"
+        sizes="(max-width: 720px) calc(100vw - 2rem), (max-width: 1100px) calc(100vw - 2rem), 640px"
+        width="1600"
+        height="900"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+        alt="Mystics Magic tarot reading hero with gold tarot cards, crystals, candlelight, and crescent moon"
+      />
       <div class="hero-stamp">
         <span>05</span>
         <p>WhatsApp text-only readings with full English reports and spread images.</p>

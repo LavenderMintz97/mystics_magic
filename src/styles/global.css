@@ -292,6 +292,15 @@ h3 {
   padding: 5.25rem 0;
 }
 
+@supports (content-visibility: auto) {
+  .section,
+  .band,
+  .site-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 620px;
+  }
+}
+
 .section.light {
   width: 100%;
   color: var(--ink);
@@ -337,7 +346,10 @@ h3 {
   border-radius: 999px 999px 8px 8px;
   background:
     linear-gradient(rgba(17, 17, 17, 0.08), rgba(17, 17, 17, 0.52)),
-    url("/images/tarot-hero-4k.jpg") center / cover;
+    image-set(
+      url("/images/tarot-hero-960.jpg") 1x,
+      url("/images/tarot-hero-1600.jpg") 2x
+    ) center / cover;
   box-shadow: var(--shadow);
 }
 
@@ -500,6 +512,13 @@ h3 {
 }
 
 .product-row {
+  display: grid;
+  grid-template-columns: max-content minmax(132px, 170px);
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  width: min(100%, 330px);
+  margin: auto auto 0;
   margin-top: auto;
   padding-top: 1rem;
 }
@@ -513,9 +532,23 @@ h3 {
 }
 
 .product-row a {
-  width: min(190px, 58%);
-  min-width: 140px;
-  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.product-row a:hover,
+.product-row a:focus-visible {
+  border-color: var(--wine);
+  color: var(--mist);
+  background: var(--wine);
+  box-shadow: 0 12px 24px rgba(139, 5, 9, 0.18);
+  transform: translateY(-2px);
 }
 
 .product-art {
@@ -529,7 +562,10 @@ h3 {
   background:
     radial-gradient(circle at 72% 26%, rgba(240, 206, 104, 0.36), transparent 4rem),
     linear-gradient(135deg, rgba(40, 69, 111, 0.92), rgba(139, 5, 9, 0.88)),
-    url("/images/tarot-hero-4k.jpg") center / cover;
+    image-set(
+      url("/images/tarot-hero-960.jpg") 1x,
+      url("/images/tarot-hero-1600.jpg") 2x
+    ) center / cover;
   background-blend-mode: screen, multiply, normal;
 }
 
@@ -774,13 +810,13 @@ textarea {
   }
 
   .product-row {
-    align-items: stretch;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    width: min(100%, 220px);
+    text-align: center;
   }
 
   .product-row a {
     width: 100%;
-    min-width: 0;
   }
 
   .hero-media {
