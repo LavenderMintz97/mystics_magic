@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page Not Found | Mystics Magic"
+  description="The requested Mystics Magic page was not found. Return home, explore services, or book a Tarot, Lenormand, or Rune reading."
+  canonicalPath="/404.html"
+  noindex={true}
+>
+  <section class="page-hero">
+    <span class="eyebrow">404</span>
+    <h1>This path is hidden.</h1>
+    <p>The page you wanted is not available, but the main consultation routes are still open.</p>
+    <div class="hero-actions">
+      <a class="button" href="/">Return Home</a>
+      <a class="button-secondary" href="/booking/">Book a Reading</a>
+    </div>
+  </section>
+</BaseLayout>

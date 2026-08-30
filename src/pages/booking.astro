@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { services } from "../data/site";
+import { bookingPageSchema } from "../data/seo";
+---
+
+<BaseLayout
+  title="Book a Tarot, Lenormand or Rune Reading | Mystics Magic"
+  description="Request a Mystics Magic WhatsApp text reading. Submit your full name, date of birth, preferred service, and one focused question before casting."
+  canonicalPath="/booking/"
+  keywords="book tarot reading, WhatsApp tarot reading, book Lenormand reading, book Rune reading, Mystic Magic booking"
+  structuredData={bookingPageSchema}
+>
+  <section class="page-hero">
+    <span class="eyebrow">Book</span>
+    <h1>Reserve a reading.</h1>
+    <p>Send your preferred reading, full name, date of birth, and one focused question. Payment is required before casting.</p>
+  </section>
+  <section class="section light">
+    <div class="contact-layout">
+      <div class="contact-panel">
+        <form class="form-grid" name="consultation-request">
+          <label>
+            Name
+            <input name="name" autocomplete="name" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            Service
+            <select name="service">
+              {services.map((service) => <option>{service.title}</option>)}
+            </select>
+          </label>
+          <label>
+            Your focused question
+            <textarea name="question" placeholder="Share one clear question for your Tarot, Lenormand, or Rune reading."></textarea>
+          </label>
+          <button class="button" type="submit">Request Booking</button>
+        </form>
+      </div>
+      <aside class="price-note">
+        <strong>MYR</strong>
+        <p>Tarot starts from RM 88. Lenormand and Rune readings start from RM 68.</p>
+        <p>All dealings are through WhatsApp text only.</p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { journalPosts } from "../data/site";
+import { resourcesPageSchema } from "../data/seo";
+---
+
+<BaseLayout
+  title="Tarot, Lenormand & Rune Journal | Mystics Magic"
+  description="Mystics Magic journal resources to help clients prepare focused questions and understand Tarot, Lenormand, and Rune readings."
+  canonicalPath="/resources/"
+  keywords="tarot reading preparation, Lenormand vs tarot, Rune reading guidance, focused reading question"
+  pageType="article"
+  structuredData={resourcesPageSchema}
+>
+  <section class="page-hero">
+    <span class="eyebrow">Journal</span>
+    <h1>Prepare your question. Deepen your reading.</h1>
+    <p>Short resources for Tarot, Lenormand, Rune casting, and client reflection before or after a reading.</p>
+  </section>
+  <section class="section light">
+    <div class="journal-grid">
+      {journalPosts.map((post) => (
+        <article class="journal-card">
+          <span>{post.category}</span>
+          <h3>{post.title}</h3>
+          <p>{post.summary}</p>
+          <a class="contact-link" href="/contact/">Ask About This</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

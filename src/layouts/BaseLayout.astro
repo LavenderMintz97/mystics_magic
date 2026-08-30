@@ -1,0 +1,144 @@
+---
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles/global.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  keywords?: string;
+  pageType?: string;
+  noindex?: boolean;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+};
+
+const {
+  title = "Mystics Magic | Tarot, Lenormand & Rune Readings",
+  description = "Tarot, Lenormand, and Rune readings for clients seeking clarity, guidance, and direction.",
+  canonicalPath = Astro.url.pathname,
+  keywords = "tarot reading Malaysia, Lenormand reading, Rune reading, Elder Futhark reading, WhatsApp tarot reading, Mystic Magic",
+  pageType = "website",
+  noindex = false,
+  structuredData = [],
+} = Astro.props;
+
+const siteUrl = "https://mystics-magic.pages.dev";
+const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
+const socialImage = new URL("/images/mystic-consultation-hero.svg", siteUrl).toString();
+const robotsContent = noindex ? "noindex, follow" : "index, follow, max-image-preview:large";
+const cleanSegments = canonicalPath
+  .replace(/^\/|\/$/g, "")
+  .split("/")
+  .filter(Boolean);
+const breadcrumbItems = [
+  { name: "Home", url: `${siteUrl}/` },
+  ...cleanSegments.map((segment, index) => ({
+    name: segment
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (letter) => letter.toUpperCase()),
+    url: new URL(`/${cleanSegments.slice(0, index + 1).join("/")}/`, siteUrl).toString(),
+  })),
+];
+const baseSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: "Mystics Magic",
+    url: siteUrl,
+    logo: new URL("/favicon.svg", siteUrl).toString(),
+    description: "Online Tarot, Lenormand, and Elder Futhark Rune reading service through WhatsApp text.",
+    sameAs: ["https://linktr.ee/vanessa_97"],
+    founder: { "@id": `${siteUrl}/#reader` },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      availableLanguage: ["English"],
+      url: `${siteUrl}/contact/`,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    name: "Mystics Magic",
+    url: siteUrl,
+    publisher: { "@id": `${siteUrl}/#organization` },
+    inLanguage: "en",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${siteUrl}/#reader`,
+    name: "Vanessa",
+    alternateName: "Mystics Magic",
+    url: `${siteUrl}/about/`,
+    sameAs: ["https://linktr.ee/vanessa_97"],
+    knowsAbout: ["Tarot Reading", "Lenormand Reading", "Elder Futhark Rune Reading", "Spiritual guidance"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: title,
+    description,
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#organization` },
+    inLanguage: "en",
+    datePublished: "2026-08-27",
+    dateModified: "2026-08-30",
+    primaryImageOfPage: socialImage,
+    breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+    isAccessibleForFree: true,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${canonicalUrl}#breadcrumb`,
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  },
+];
+const extraSchema = Array.isArray(structuredData) ? structuredData : [structuredData];
+const schemaGraph = [...baseSchema, ...extraSchema.filter(Boolean)];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Mystics Magic" />
+    <meta name="robots" content={robotsContent} />
+    <meta name="googlebot" content={robotsContent} />
+    <meta name="bingbot" content={robotsContent} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content="Mystics Magic" />
+    <meta property="og:type" content={pageType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schemaGraph)}></script>
+    <title>{title}</title>
+  </head>
+  <body>
+    <SiteHeader />
+    <main>
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

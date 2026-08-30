@@ -1,0 +1,24 @@
+---
+import { navItems } from "../data/site";
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Mystics Magic home">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span>Mystics Magic</span>
+  </a>
+  <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-label="Open menu" />
+  <label class="nav-button" for="nav-toggle" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <nav class="main-nav" aria-label="Main navigation">
+    {navItems.map((item) => (
+      <a href={item.href} class:list={[currentPath === item.href && "active"]}>{item.label}</a>
+    ))}
+  </nav>
+  <a class="header-cta" href="/booking/">Book Reading</a>
+</header>

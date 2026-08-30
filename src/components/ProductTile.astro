@@ -1,0 +1,22 @@
+---
+type Props = {
+  title: string;
+  price: string;
+  label: string;
+  description: string;
+};
+
+const { title, price, label, description } = Astro.props;
+---
+
+<article class="product-tile">
+  <div class="product-art" aria-hidden="true">
+    <span>{label}</span>
+  </div>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <div class="product-row">
+    <strong>{price}</strong>
+    <a href="/contact/">Request</a>
+  </div>
+</article>
