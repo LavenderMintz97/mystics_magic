@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProductTile from "../components/ProductTile.astro";
+import { products } from "../data/site";
+import { shopPageSchema } from "../data/seo";
+---
+
+<BaseLayout
+  title="Digital Tarot Products & Workbooks | Mystics Magic"
+  description="Mystics Magic digital shop for upcoming Tarot, Lenormand, Rune, journal, and reading preparation products with MYR prices."
+  canonicalPath="/shop/"
+  keywords="tarot digital products, Lenormand workbook, Rune guide, digital tarot journal, Mystics Magic shop"
+  structuredData={shopPageSchema}
+>
+  <section class="page-hero">
+    <span class="eyebrow">Shop</span>
+    <h1>Digital product items.</h1>
+    <p>This shop section is prepared for your digital products. Send the items, images, descriptions, and MYR prices when ready.</p>
+  </section>
+  <section class="section light">
+    <div class="product-grid">
+      {products.map((product) => <ProductTile {...product} />)}
+    </div>
+  </section>
+</BaseLayout>

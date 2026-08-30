@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { testimonials } from "../data/site";
+import { testimonialPageSchema } from "../data/seo";
+---
+
+<BaseLayout
+  title="Client Testimonials | Mystics Magic Readings"
+  description="Read client reflections from Mystics Magic Tarot, Lenormand, and Rune readings for clarity, guidance, direction, and grounded spiritual insight."
+  canonicalPath="/testimonials/"
+  keywords="tarot reading testimonials, Lenormand reading review, Rune reading testimonial, Mystics Magic clients"
+  structuredData={testimonialPageSchema}
+>
+  <section class="page-hero">
+    <span class="eyebrow">Testimonials</span>
+    <h1>Client reflections after the reading.</h1>
+    <p>Stories from clients who used Tarot, Lenormand, and Rune readings to find clarity and direction.</p>
+  </section>
+  <section class="section light">
+    <div class="testimonial-grid">
+      {testimonials.map((item) => (
+        <article class="testimonial">
+          <p>"{item.quote}"</p>
+          <strong>{item.name}</strong>
+          <span>{item.detail}</span>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

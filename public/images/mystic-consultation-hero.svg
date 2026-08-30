@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Mystics Magic tarot reading table</title>
+  <desc id="desc">An ornate mystical reading table with tarot cards, crystals, candles, stars, and moon symbols.</desc>
+  <defs>
+    <radialGradient id="glow" cx="64%" cy="24%" r="62%">
+      <stop offset="0" stop-color="#f0ce68" stop-opacity=".66"/>
+      <stop offset=".3" stop-color="#8f7bd9" stop-opacity=".5"/>
+      <stop offset=".68" stop-color="#28456f" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#111111"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffaf1"/>
+      <stop offset="1" stop-color="#d9c6a3"/>
+    </linearGradient>
+    <linearGradient id="wine" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#8b0509"/>
+      <stop offset="1" stop-color="#281314"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="#111111"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <path d="M0 0h1200v1500H0z" fill="none" stroke="#d7a928" stroke-width="8"/>
+  <path d="M40 42h1120v1416H40z" fill="none" stroke="#f0ce68" stroke-width="2" opacity=".7"/>
+  <g opacity=".9" fill="#f0ce68">
+    <path d="M165 145l18 48 48 18-48 18-18 48-18-48-48-18 48-18z"/>
+    <path d="M1010 245l11 30 30 11-30 11-11 30-11-30-30-11 30-11z"/>
+    <path d="M913 92l9 24 24 9-24 9-9 24-9-24-24-9 24-9z"/>
+    <circle cx="250" cy="1050" r="5"/>
+    <circle cx="930" cy="1140" r="5"/>
+    <circle cx="760" cy="180" r="4"/>
+  </g>
+  <path d="M230 220a150 150 0 1 0 150 150 115 115 0 1 1-150-150z" fill="#f0ce68" opacity=".82"/>
+  <ellipse cx="600" cy="970" rx="410" ry="160" fill="#050505" opacity=".4"/>
+  <g filter="url(#softShadow)">
+    <rect x="125" y="675" width="250" height="420" rx="28" fill="url(#wine)" stroke="#d7a928" stroke-width="5" transform="rotate(-10 250 885)"/>
+    <rect x="160" y="715" width="180" height="275" rx="18" fill="#191714" stroke="#f0ce68" stroke-width="3" transform="rotate(-10 250 885)"/>
+    <text x="238" y="832" fill="#f0ce68" font-family="Times New Roman, serif" font-size="42" font-weight="700" text-anchor="middle" transform="rotate(-10 238 832)">TAROT</text>
+    <circle cx="245" cy="900" r="58" fill="none" stroke="#f0ce68" stroke-width="4" transform="rotate(-10 245 900)"/>
+    <path d="M245 824l17 56 58 20-58 20-17 56-17-56-58-20 58-20z" fill="#d7a928" opacity=".9" transform="rotate(-10 245 900)"/>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="470" y="620" width="205" height="330" rx="22" fill="url(#card)" stroke="#d7a928" stroke-width="4" transform="rotate(-5 572 785)"/>
+    <rect x="524" y="666" width="98" height="98" rx="49" fill="#f0ce68" opacity=".85" transform="rotate(-5 572 715)"/>
+    <path d="M522 835c38-65 76-65 114 0" fill="none" stroke="#8b0509" stroke-width="8" stroke-linecap="round" transform="rotate(-5 579 835)"/>
+    <text x="572" y="910" fill="#171311" font-family="Times New Roman, serif" font-size="30" font-weight="700" text-anchor="middle" transform="rotate(-5 572 910)">THE SUN</text>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="650" y="600" width="205" height="330" rx="22" fill="url(#card)" stroke="#d7a928" stroke-width="4" transform="rotate(8 752 765)"/>
+    <path d="M768 666a72 72 0 1 0 0 144 56 56 0 1 1 0-144z" fill="#28456f" transform="rotate(8 752 738)"/>
+    <path d="M724 820h90l-45 70z" fill="#8f7bd9" opacity=".8" transform="rotate(8 769 855)"/>
+    <text x="752" y="892" fill="#171311" font-family="Times New Roman, serif" font-size="30" font-weight="700" text-anchor="middle" transform="rotate(8 752 892)">THE MOON</text>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="835" y="692" width="205" height="330" rx="22" fill="url(#card)" stroke="#d7a928" stroke-width="4" transform="rotate(14 938 857)"/>
+    <circle cx="938" cy="765" r="58" fill="#8b0509" opacity=".85" transform="rotate(14 938 765)"/>
+    <path d="M938 700v130M873 765h130M892 719l92 92M984 719l-92 92" stroke="#f0ce68" stroke-width="6" stroke-linecap="round" transform="rotate(14 938 765)"/>
+    <text x="938" y="952" fill="#171311" font-family="Times New Roman, serif" font-size="30" font-weight="700" text-anchor="middle" transform="rotate(14 938 952)">WHEEL</text>
+  </g>
+  <g fill="none" stroke="#f0ce68" stroke-width="5" opacity=".85">
+    <path d="M180 1220c210-94 360-96 515-8 134 76 246 74 350-9"/>
+    <path d="M220 1278c168-54 307-50 420 12 132 72 246 58 344-44"/>
+  </g>
+  <g fill="#f0ce68" opacity=".92">
+    <circle cx="312" cy="1160" r="36"/>
+    <path d="M302 1080l42 70-84 0z"/>
+    <path d="M894 1100l44 76h-88z"/>
+    <circle cx="990" cy="1192" r="40"/>
+  </g>
+  <g stroke="#d7a928" stroke-width="4" fill="none" opacity=".82">
+    <path d="M90 135h130M980 134h130M90 1365h130M980 1365h130"/>
+    <path d="M120 116c42 0 52-30 52-72M1028 116c0-42 30-52 72-52M120 1384c42 0 52 30 52 72M1028 1384c0 42 30 52 72 52"/>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { contactPageSchema } from "../data/seo";
+---
+
+<BaseLayout
+  title="Contact Mystics Magic | Reading Enquiries"
+  description="Contact Mystics Magic for Tarot Reading, Lenormand Reading, Rune Reading, custom spiritual readings, booking help, and service enquiries."
+  canonicalPath="/contact/"
+  keywords="contact tarot reader, Mystics Magic contact, Lenormand enquiry, Rune reading enquiry"
+  structuredData={contactPageSchema}
+>
+  <section class="page-hero">
+    <span class="eyebrow">Contact</span>
+    <h1>Ask before you book.</h1>
+    <p>Use this page for Tarot, Lenormand, Rune enquiries, custom readings, or help choosing the right service.</p>
+  </section>
+  <section class="section light">
+    <div class="contact-layout">
+      <div class="contact-panel">
+        <form class="form-grid" name="contact">
+          <label>
+            Name
+            <input name="name" autocomplete="name" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            Topic
+            <select name="topic">
+              <option>Help choosing a reading</option>
+              <option>Tarot reading</option>
+              <option>Lenormand reading</option>
+              <option>Rune reading</option>
+              <option>Custom reading</option>
+              <option>Group event</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" placeholder="Tell me what you are looking for."></textarea>
+          </label>
+          <button class="button" type="submit">Send Message</button>
+        </form>
+      </div>
+      <aside class="price-note">
+        <strong>Text</strong>
+        <p>Readings are available through WhatsApp text only.</p>
+        <p>Public contact profile: <a href="https://linktr.ee/vanessa_97" rel="noopener noreferrer">linktr.ee/vanessa_97</a></p>
+        <a class="contact-link" href="/booking/">Book Instead</a>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

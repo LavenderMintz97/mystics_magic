@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { aboutPageSchema } from "../data/seo";
+---
+
+<BaseLayout
+  title="About Mystics Magic | Tarot, Lenormand & Rune Reader"
+  description="Learn about Mystics Magic's client-centered approach to Tarot, Lenormand, and Elder Futhark Rune readings for reflective guidance."
+  canonicalPath="/about/"
+  keywords="Mystics Magic reader, tarot reader approach, Lenormand reader, Rune reader, spiritual guidance service"
+  structuredData={aboutPageSchema}
+>
+  <section class="page-hero">
+    <span class="eyebrow">About</span>
+    <h1>Intuition with structure.</h1>
+    <p>Mystics Magic is a personal reading practice focused on Tarot, Lenormand, and Elder Futhark Rune guidance.</p>
+  </section>
+  <section class="section light">
+    <div class="about-layout">
+      <div>
+        <h2>For clients who want meaning without losing the ground.</h2>
+        <p>The reading style is reflective, warm, and direct. Each reading is built to help clients see patterns, receive guidance, and choose the next small action with more calm.</p>
+        <p>Every offering keeps the client at the center: cards and runes provide language, but your lived experience decides what becomes useful.</p>
+      </div>
+      <div class="arch-photo" aria-hidden="true"></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Trust and care</span>
+        <h2>Clear process before every casting.</h2>
+      </div>
+      <p>Mystics Magic keeps the reading process transparent so clients know what is included, what is required, and what the reading can and cannot promise.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="about-stat">
+        <strong>Tarot</strong>
+        <p>Symbolic guidance for choices, emotions, patterns, and next steps.</p>
+      </div>
+      <div class="about-stat">
+        <strong>Lenormand</strong>
+        <p>Practical insight for specific situations, patterns, and choices.</p>
+      </div>
+      <div class="about-stat">
+        <strong>Runes</strong>
+        <p>Elder Futhark guidance for energy, protection, and deeper direction.</p>
+      </div>
+      <div class="about-stat">
+        <strong>Care</strong>
+        <p>Clear notes, respectful privacy, and client-led interpretation.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

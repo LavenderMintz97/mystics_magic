@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import ProductTile from "../components/ProductTile.astro";
+import { journalPosts, products, services, testimonials } from "../data/site";
+import { serviceItemListSchema } from "../data/seo";
+---
+
+<BaseLayout
+  title="Mystics Magic | Tarot, Lenormand & Rune Readings in MYR"
+  description="Mystics Magic offers Tarot Reading, Lenormand Reading, and Elder Futhark Rune Reading through WhatsApp text with English reports and MYR pricing."
+  canonicalPath="/"
+  keywords="Mystics Magic, tarot reading MYR, Lenormand reading Malaysia, Rune reading Malaysia, WhatsApp tarot reading"
+  structuredData={serviceItemListSchema}
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Tarot, Lenormand, and Rune readings</span>
+      <h1>Clarity for the path ahead.</h1>
+      <p>Mystics Magic helps clients turn one focused question into clear guidance through Tarot Reading, Lenormand Reading, and Elder Futhark Rune Reading.</p>
+      <div class="hero-actions">
+        <a class="button" href="/booking/">Book a Reading</a>
+        <a class="button-secondary" href="/services/">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="/images/mystic-consultation-hero.svg" alt="Tarot cards, crystals, and reading tools arranged for a mystical consultation" />
+      <div class="hero-stamp">
+        <span>05</span>
+        <p>WhatsApp text-only readings with full English reports and spread images.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Reading pathways</span>
+        <h2>Choose the reading that fits your question.</h2>
+      </div>
+      <p>Each service includes a detailed written report in English and images shared after casting.</p>
+    </div>
+    <div class="service-grid">
+      {services.map((service) => <ServiceCard {...service} />)}
+    </div>
+  </section>
+
+  <section class="section split">
+    <div class="arch-photo" aria-hidden="true"></div>
+    <div>
+      <span class="eyebrow">Consultation style</span>
+      <h2>Soft mysticism, useful answers.</h2>
+      <p>Readings are designed for clients who want symbolism, care, and practical direction in the same place. You bring one focused question; the reading stays centered on that question.</p>
+      <ul class="ritual-list">
+        <li>Full name and date of birth collected before casting.</li>
+        <li>Cards, runes, and energy are cleansed before every reading.</li>
+        <li>Honest insight for reflection, direction, and empowered decisions.</li>
+      </ul>
+      <div class="section-actions">
+        <a class="button" href="/about/">Meet the Reader</a>
+        <a class="button-secondary" href="/testimonials/">Client Stories</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-inner">
+      <h2>Enquiry now for Tarot, Lenormand, or Rune guidance through WhatsApp text only.</h2>
+      <a class="button" href="/contact/">Start Enquiry</a>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Digital shop</span>
+        <h2>Digital products will be added here soon.</h2>
+      </div>
+      <p>This area is ready for your digital product items once you send the final list, images, and prices.</p>
+    </div>
+    <div class="product-grid">
+      {products.map((product) => <ProductTile {...product} />)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Journal</span>
+        <h2>Resources for clearer questions.</h2>
+      </div>
+      <a class="button-secondary" href="/resources/">Read More</a>
+    </div>
+    <div class="journal-grid">
+      {journalPosts.map((post) => (
+        <article class="journal-card">
+          <span>{post.category}</span>
+          <h3>{post.title}</h3>
+          <p>{post.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">Client notes</span>
+        <h2>Grounded, warm, specific.</h2>
+      </div>
+      <a class="button-secondary" href="/booking/">Start Here</a>
+    </div>
+    <div class="testimonial-grid">
+      {testimonials.map((item) => (
+        <article class="testimonial">
+          <p>"{item.quote}"</p>
+          <strong>{item.name}</strong>
+          <span>{item.detail}</span>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

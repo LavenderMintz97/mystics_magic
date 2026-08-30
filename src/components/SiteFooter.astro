@@ -1,0 +1,26 @@
+---
+import { navItems } from "../data/site";
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-about">
+      <a class="brand footer-brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Mystics Magic</span>
+      </a>
+      <p>Tarot, Lenormand, and Rune readings for clear, grounded spiritual guidance.</p>
+    </div>
+    <nav class="footer-menu" aria-label="Footer navigation">
+      <span>Navigation</span>
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+    <div class="footer-note">
+      <span>Reading Details</span>
+      <p>WhatsApp text-only readings available online.</p>
+      <p><a href="https://linktr.ee/vanessa_97" rel="noopener noreferrer">linktr.ee/vanessa_97</a></p>
+      <p>For insight and reflection, not medical, legal, or financial advice.</p>
+      <p>Last updated: August 30, 2026.</p>
+    </div>
+  </div>
+</footer>
