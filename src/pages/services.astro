@@ -1,21 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ServiceCard from "../components/ServiceCard.astro";
-import { services } from "../data/site";
+import { contactUrl, faqs, services } from "../data/site";
 import { serviceItemListSchema } from "../data/seo";
 ---
 
 <BaseLayout
   title="Tarot, Lenormand & Rune Reading Services | Mystics Magic"
-  description="Compare Mystics Magic reading services with MYR pricing: Tarot from RM 88, Lenormand from RM 68, and Elder Futhark Rune readings from RM 68."
+  description="Compare Mystics Magic reading services with USD pricing: Tarot from USD $20, Lenormand from USD $15, and Elder Futhark Rune readings from USD $15."
   canonicalPath="/services/"
-  keywords="tarot reading price Malaysia, Lenormand reading price, Rune reading price, Elder Futhark reading, MYR tarot reading"
+  keywords="tarot reading price USD, Lenormand reading price, Rune reading price, Elder Futhark reading, WhatsApp tarot reading"
   structuredData={serviceItemListSchema}
 >
   <section class="page-hero">
     <span class="eyebrow">Services</span>
     <h1>Readings for clarity, guidance, and direction.</h1>
-    <p>Compare Tarot, Lenormand, and Rune readings before choosing the service that fits your focused question.</p>
+    <p>Compare Tarot, Lenormand, and Rune readings in USD before choosing the service that fits your focused question.</p>
   </section>
   <section class="section light">
     <div class="service-grid">
@@ -44,13 +44,34 @@ import { serviceItemListSchema } from "../data/seo";
       <article class="step">
         <span>03</span>
         <h3>Receive your report</h3>
-        <p>Every booking includes a full detailed report in English plus spread or casting images.</p>
+        <p>Every booking includes a full detailed report in English plus spread or casting images within 2-3 days after payment and details are received.</p>
       </article>
       <article class="step">
         <span>04</span>
         <h3>Reflect gently</h3>
         <p>Readings offer insight and possible directions for guidance and self-reflection.</p>
       </article>
+    </div>
+    <div class="section-actions">
+      <a class="button" href={contactUrl} target="_blank" rel="noopener noreferrer">Book via WhatsApp</a>
+      <a class="button-secondary" href="/booking/">View Booking Page</a>
+    </div>
+  </section>
+  <section class="section light">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">FAQ</span>
+        <h2>Booking questions.</h2>
+      </div>
+      <p>Clear answers help you choose the right reading and know what to send before casting begins.</p>
+    </div>
+    <div class="faq-grid">
+      {faqs.map((item) => (
+        <article class="faq-card">
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </article>
+      ))}
     </div>
   </section>
 </BaseLayout>

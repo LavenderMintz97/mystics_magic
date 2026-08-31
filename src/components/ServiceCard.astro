@@ -6,9 +6,12 @@ type Props = {
   tiers?: { label: string; price: string }[];
   theme: string;
   includes: string[];
+  actionLabel?: string;
+  href?: string;
+  external?: boolean;
 };
 
-const { title, duration, price, tiers = [], theme, includes } = Astro.props;
+const { title, duration, price, tiers = [], theme, includes, actionLabel = "Reserve Session", href = "/booking/", external = false } = Astro.props;
 ---
 
 <article class="service-card">
@@ -31,5 +34,5 @@ const { title, duration, price, tiers = [], theme, includes } = Astro.props;
   <ul>
     {includes.map((item) => <li>{item}</li>)}
   </ul>
-  <a href="/booking/">Reserve Session</a>
+  <a href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{actionLabel}</a>
 </article>

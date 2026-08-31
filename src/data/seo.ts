@@ -1,8 +1,8 @@
-import { journalPosts, products, services, testimonials } from "./site";
+import { contactUrl, journalPosts, paymentUrl, products, services, testimonials } from "./site";
 
 const siteUrl = "https://mystics-magic.pages.dev";
 const datePublished = "2026-08-27";
-const dateModified = "2026-08-30";
+const dateModified = "2026-08-31";
 const publisher = { "@id": `${siteUrl}/#organization` };
 const author = { "@id": `${siteUrl}/#reader` };
 
@@ -11,6 +11,8 @@ const slugify = (value: string) =>
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
+
+const numericPrice = (value: string) => value.replace(/[^0-9.]/g, "");
 
 export const serviceItemListSchema = {
   "@context": "https://schema.org",
@@ -28,15 +30,15 @@ export const serviceItemListSchema = {
       areaServed: "Worldwide",
       availableChannel: {
         "@type": "ServiceChannel",
-        serviceUrl: `${siteUrl}/booking/`,
+        serviceUrl: contactUrl,
       },
       offers: service.tiers.map((tier) => ({
         "@type": "Offer",
         name: `${service.title} - ${tier.label}`,
-        price: tier.price.replace("RM ", ""),
-        priceCurrency: "MYR",
+        price: numericPrice(tier.price),
+        priceCurrency: "USD",
         availability: "https://schema.org/InStock",
-        url: `${siteUrl}/booking/`,
+        url: contactUrl,
       })),
     },
   })),
@@ -58,7 +60,7 @@ export const bookingPageSchema = [
       name: "Request a reading",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `${siteUrl}/booking/`,
+        urlTemplate: contactUrl,
         actionPlatform: "https://schema.org/DesktopWebPlatform",
       },
     },
@@ -75,17 +77,25 @@ export const shopPageSchema = {
   dateModified,
   mainEntity: {
     "@type": "ItemList",
-    name: "Upcoming Mystics Magic Digital Products",
+    name: "Mystics Magic Digital Products",
     itemListElement: products.map((product, index) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {
-        "@type": "CreativeWork",
+        "@type": "Product",
         name: product.title,
         description: product.description,
-        about: product.label,
-        creator: publisher,
+        category: product.label,
+        brand: publisher,
         url: `${siteUrl}/shop/#${slugify(product.title)}`,
+        offers: {
+          "@type": "Offer",
+          price: numericPrice(product.price),
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          url: product.href ?? paymentUrl,
+          seller: publisher,
+        },
       },
     })),
   },
@@ -125,7 +135,7 @@ export const aboutPageSchema = {
     name: "Vanessa",
     alternateName: "Mystics Magic",
     url: `${siteUrl}/about/`,
-    sameAs: ["https://linktr.ee/vanessa_97"],
+    sameAs: ["https://linktr.ee/vanessa_97", paymentUrl],
     knowsAbout: ["Tarot Reading", "Lenormand Reading", "Elder Futhark Rune Reading", "Spiritual guidance"],
   },
 };

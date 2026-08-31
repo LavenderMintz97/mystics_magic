@@ -1,5 +1,5 @@
 ---
-import { navItems } from "../data/site";
+import { contactUrl, navItems, paymentUrl } from "../data/site";
 ---
 
 <footer class="site-footer">
@@ -18,9 +18,10 @@ import { navItems } from "../data/site";
     <div class="footer-note">
       <span>Reading Details</span>
       <p>WhatsApp text-only readings available online.</p>
-      <p><a href="https://linktr.ee/vanessa_97" rel="noopener noreferrer">linktr.ee/vanessa_97</a></p>
+      <p><a href={contactUrl} target="_blank" rel="noopener noreferrer">linktr.ee/vanessa_97</a></p>
+      <p><a href={paymentUrl} target="_blank" rel="noopener noreferrer">Ko-fi payment: Vanessa Ng</a></p>
       <p>For insight and reflection, not medical, legal, or financial advice.</p>
-      <p>Last updated: August 30, 2026.</p>
+      <p>Last updated: August 31, 2026.</p>
     </div>
   </div>
 </footer>

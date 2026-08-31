@@ -1,11 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { contactUrl, paymentUrl } from "../data/site";
 import { contactPageSchema } from "../data/seo";
 ---
 
 <BaseLayout
   title="Contact Mystics Magic | Reading Enquiries"
-  description="Contact Mystics Magic for Tarot Reading, Lenormand Reading, Rune Reading, custom spiritual readings, booking help, and service enquiries."
+  description="Contact Mystics Magic for Tarot Reading, Lenormand Reading, Rune Reading, digital product purchases, booking help, and service enquiries."
   canonicalPath="/contact/"
   keywords="contact tarot reader, Mystics Magic contact, Lenormand enquiry, Rune reading enquiry"
   structuredData={contactPageSchema}
@@ -13,7 +14,7 @@ import { contactPageSchema } from "../data/seo";
   <section class="page-hero">
     <span class="eyebrow">Contact</span>
     <h1>Ask before you book.</h1>
-    <p>Use this page for Tarot, Lenormand, Rune enquiries, custom readings, or help choosing the right service.</p>
+    <p>Use this page for Tarot, Lenormand, Rune enquiries, digital product purchases, custom readings, or help choosing the right service.</p>
   </section>
   <section class="section light">
     <div class="contact-layout">
@@ -34,6 +35,7 @@ import { contactPageSchema } from "../data/seo";
               <option>Tarot reading</option>
               <option>Lenormand reading</option>
               <option>Rune reading</option>
+              <option>Digital product purchase</option>
               <option>Custom reading</option>
               <option>Group event</option>
             </select>
@@ -42,14 +44,15 @@ import { contactPageSchema } from "../data/seo";
             Message
             <textarea name="message" placeholder="Tell me what you are looking for."></textarea>
           </label>
-          <button class="button" type="submit">Send Message</button>
+          <a class="button" href={contactUrl} target="_blank" rel="noopener noreferrer">Send on WhatsApp</a>
         </form>
       </div>
       <aside class="price-note">
         <strong>Text</strong>
         <p>Readings are available through WhatsApp text only.</p>
-        <p>Public contact profile: <a href="https://linktr.ee/vanessa_97" rel="noopener noreferrer">linktr.ee/vanessa_97</a></p>
-        <a class="contact-link" href="/booking/">Book Instead</a>
+        <p>Public contact profile: <a href={contactUrl} target="_blank" rel="noopener noreferrer">linktr.ee/vanessa_97</a></p>
+        <a class="contact-link" href={contactUrl} target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
+        <a class="contact-link" href={paymentUrl} target="_blank" rel="noopener noreferrer">Pay on Ko-fi</a>
       </aside>
     </div>
   </section>

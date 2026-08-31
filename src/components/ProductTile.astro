@@ -4,12 +4,19 @@ type Props = {
   price: string;
   label: string;
   description: string;
+  actionLabel?: string;
+  href?: string;
+  external?: boolean;
 };
 
-const { title, price, label, description } = Astro.props;
+const { title, price, label, description, actionLabel = "Request", href = "/contact/", external = false } = Astro.props;
+const productId = title
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/(^-|-$)/g, "");
 ---
 
-<article class="product-tile">
+<article class="product-tile" id={productId}>
   <div class="product-art" aria-hidden="true">
     <span>{label}</span>
   </div>
@@ -17,6 +24,6 @@ const { title, price, label, description } = Astro.props;
   <p>{description}</p>
   <div class="product-row">
     <strong>{price}</strong>
-    <a href="/contact/">Request</a>
+    <a href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>{actionLabel}</a>
   </div>
 </article>

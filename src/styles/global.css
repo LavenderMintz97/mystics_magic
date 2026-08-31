@@ -240,6 +240,10 @@ h3 {
   margin-top: 1.25rem;
 }
 
+.centered-actions {
+  justify-content: center;
+}
+
 .hero-media {
   position: relative;
   min-height: 600px;
@@ -355,7 +359,8 @@ h3 {
 
 .service-grid,
 .testimonial-grid,
-.journal-grid {
+.journal-grid,
+.faq-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -372,6 +377,7 @@ h3 {
 .product-tile,
 .testimonial,
 .journal-card,
+.faq-card,
 .step,
 .contact-panel,
 .price-note,
@@ -386,6 +392,7 @@ h3 {
 .light .product-tile,
 .light .testimonial,
 .light .journal-card,
+.light .faq-card,
 .light .step,
 .light .contact-panel,
 .light .price-note,
@@ -398,9 +405,23 @@ h3 {
 .product-tile,
 .testimonial,
 .journal-card,
+.faq-card,
 .step {
   min-height: 100%;
   padding: 1.25rem;
+}
+
+.faq-card h3 {
+  margin-bottom: 0.65rem;
+  color: var(--gold-soft);
+}
+
+.light .faq-card h3 {
+  color: var(--wine);
+}
+
+.faq-card p {
+  margin-bottom: 0;
 }
 
 .product-tile {
@@ -707,6 +728,10 @@ textarea {
   margin-bottom: 0.45rem;
 }
 
+.price-note .contact-link + .contact-link {
+  margin-top: 0.7rem;
+}
+
 @media (max-width: 980px) {
   .site-header {
     grid-template-columns: auto auto;
@@ -776,6 +801,7 @@ textarea {
   .product-grid,
   .testimonial-grid,
   .journal-grid,
+  .faq-grid,
   .steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -834,6 +860,7 @@ textarea {
   .product-grid,
   .testimonial-grid,
   .journal-grid,
+  .faq-grid,
   .steps-grid {
     grid-template-columns: 1fr;
   }

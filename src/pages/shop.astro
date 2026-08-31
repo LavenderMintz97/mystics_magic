@@ -1,21 +1,25 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProductTile from "../components/ProductTile.astro";
-import { products } from "../data/site";
+import { contactUrl, paymentUrl, products } from "../data/site";
 import { shopPageSchema } from "../data/seo";
 ---
 
 <BaseLayout
   title="Digital Tarot Products & Workbooks | Mystics Magic"
-  description="Mystics Magic digital shop for upcoming Tarot, Lenormand, Rune, journal, and reading preparation products with MYR prices."
+  description="Mystics Magic digital shop for printable planners, journals, manifestation workbooks, and reading preparation products with clear USD pricing."
   canonicalPath="/shop/"
-  keywords="tarot digital products, Lenormand workbook, Rune guide, digital tarot journal, Mystics Magic shop"
+  keywords="tarot digital products, manifestation planner, financial planner journal, digital tarot journal, Mystics Magic shop"
   structuredData={shopPageSchema}
 >
   <section class="page-hero">
     <span class="eyebrow">Shop</span>
     <h1>Digital product items.</h1>
-    <p>This shop section is prepared for your digital products. Send the items, images, descriptions, and MYR prices when ready.</p>
+    <p>Purchase digital planners and printable journals through Ko-fi. Prices are shown in USD, and file delivery is confirmed through WhatsApp after payment.</p>
+    <div class="section-actions">
+      <a class="button" href={paymentUrl} target="_blank" rel="noopener noreferrer">Open Ko-fi Shop</a>
+      <a class="button-secondary" href={contactUrl} target="_blank" rel="noopener noreferrer">Confirm on WhatsApp</a>
+    </div>
   </section>
   <section class="section light">
     <div class="product-grid">

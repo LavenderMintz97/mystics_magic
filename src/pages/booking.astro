@@ -1,12 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { services } from "../data/site";
+import { contactUrl, faqs, paymentUrl, services } from "../data/site";
 import { bookingPageSchema } from "../data/seo";
 ---
 
 <BaseLayout
   title="Book a Tarot, Lenormand or Rune Reading | Mystics Magic"
-  description="Request a Mystics Magic WhatsApp text reading. Submit your full name, date of birth, preferred service, and one focused question before casting."
+  description="Book a Mystics Magic WhatsApp text reading with USD pricing. Send your full name, date of birth, preferred service, and one focused question before casting."
   canonicalPath="/booking/"
   keywords="book tarot reading, WhatsApp tarot reading, book Lenormand reading, book Rune reading, Mystic Magic booking"
   structuredData={bookingPageSchema}
@@ -14,7 +14,7 @@ import { bookingPageSchema } from "../data/seo";
   <section class="page-hero">
     <span class="eyebrow">Book</span>
     <h1>Reserve a reading.</h1>
-    <p>Send your preferred reading, full name, date of birth, and one focused question. Payment is required before casting.</p>
+    <p>Send your preferred reading, full name, date of birth, and one focused question through WhatsApp. Payment is required before casting.</p>
   </section>
   <section class="section light">
     <div class="contact-layout">
@@ -38,14 +38,33 @@ import { bookingPageSchema } from "../data/seo";
             Your focused question
             <textarea name="question" placeholder="Share one clear question for your Tarot, Lenormand, or Rune reading."></textarea>
           </label>
-          <button class="button" type="submit">Request Booking</button>
+          <a class="button" href={contactUrl} target="_blank" rel="noopener noreferrer">Open WhatsApp Booking</a>
         </form>
       </div>
       <aside class="price-note">
-        <strong>MYR</strong>
-        <p>Tarot starts from RM 88. Lenormand and Rune readings start from RM 68.</p>
-        <p>All dealings are through WhatsApp text only.</p>
+        <strong>USD</strong>
+        <p>Tarot starts from USD $20. Lenormand and Rune readings start from USD $15.</p>
+        <p>Payment is available through Ko-fi. Reading details and delivery are handled through WhatsApp text only.</p>
+        <a class="contact-link" href={contactUrl} target="_blank" rel="noopener noreferrer">Book Direct</a>
+        <a class="contact-link" href={paymentUrl} target="_blank" rel="noopener noreferrer">Pay on Ko-fi</a>
       </aside>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-intro">
+      <div>
+        <span class="eyebrow">FAQ</span>
+        <h2>Before you send a request.</h2>
+      </div>
+      <p>The reading is asynchronous, private, and delivered as a written English report with casting images.</p>
+    </div>
+    <div class="faq-grid">
+      {faqs.map((item) => (
+        <article class="faq-card">
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </article>
+      ))}
     </div>
   </section>
 </BaseLayout>

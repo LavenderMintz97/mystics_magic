@@ -1,6 +1,6 @@
 # Mystics Magic
 
-> Mystics Magic offers online Tarot Reading, Lenormand Reading, and Elder Futhark Rune Reading through WhatsApp text, with detailed English reports and MYR pricing.
+> Mystics Magic offers online Tarot Reading, Lenormand Reading, and Elder Futhark Rune Reading through WhatsApp text, with detailed English reports, digital products, and clear USD pricing.
 
 ## Site
 
@@ -12,12 +12,22 @@
 - [About](https://mystics-magic.pages.dev/about/)
 - [Testimonials](https://mystics-magic.pages.dev/testimonials/)
 - [Contact](https://mystics-magic.pages.dev/contact/)
+- [Public Contact Profile](https://linktr.ee/vanessa_97)
+- [Ko-fi Payment](https://ko-fi.com/vanessang97)
 
 ## Services
 
-- Mystic Tarot Reading: General Question RM 88, Complex Question RM 168. Includes 5-6 card spreads, a full detailed English report, WhatsApp text-only delivery, and spread images after casting.
-- Lenormand Reading: General Question RM 68, Complex Question RM 88. Includes 3-9 card spreads, a full detailed English report, WhatsApp text-only delivery, and one focused question.
-- Rune Elder Futhark Norse Reading: General Question RM 68, Complex Question RM 88. Includes 3-9 rune casts, a full detailed English report, casting images after casting, and full name plus date of birth before casting.
+- Mystic Tarot Reading: General Question USD $20, Complex Question USD $45. Includes 5-6 card spreads, a full detailed English report, WhatsApp text-only delivery, and spread images after casting.
+- Lenormand Reading: General Question USD $15, Complex Question USD $20. Includes 3-9 card spreads, a full detailed English report, WhatsApp text-only delivery, and one focused question.
+- Rune Elder Futhark Norse Reading: General Question USD $15, Complex Question USD $20. Includes 3-9 rune casts, a full detailed English report, casting images after casting, and full name plus date of birth before casting.
+
+## Digital Products
+
+- [Aligned Wealth Financial Planner and Journal](https://mystics-magic.pages.dev/shop/#aligned-wealth-financial-planner-and-journal): USD $22 printable financial clarity planner for money goals, aligned budgeting, journaling, and reflective planning.
+- [Mystic Magic Aligned Becoming Manifestation Planner](https://mystics-magic.pages.dev/shop/#mystic-magic-aligned-becoming-manifestation-planner): USD $17 digital manifestation planner for intention setting, identity shifts, aligned action, and personal reflection.
+- [Tarot Reflection Journal](https://mystics-magic.pages.dev/shop/#tarot-reflection-journal): USD $12 printable journal for questions, card pulls, insights, and follow-up reflections.
+- [Question Clarity Planner](https://mystics-magic.pages.dev/shop/#question-clarity-planner): USD $8 worksheet for preparing one focused question before a reading.
+- Product payments are handled through [Ko-fi](https://ko-fi.com/vanessang97), with delivery details confirmed through [WhatsApp or Linktree](https://linktr.ee/vanessa_97).
 
 ## Trust And Editorial Notes
 
@@ -25,8 +35,9 @@
 - Readings are not guaranteed future outcomes.
 - Readings are not medical, legal, or financial advice.
 - All cards, runes, and energy are cleansed before every casting.
-- Contact and booking are available through the website contact and booking pages.
-- Last updated: 2026-08-30.
+- Contact, booking, and digital product purchases are available through the website contact, booking, shop pages, and public contact profile.
+- Reading reports usually arrive within 2-3 days after payment and required details are received.
+- Last updated: 2026-08-31.
 
 ## AI Crawler Policy
 
