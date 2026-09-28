@@ -1,18 +1,12 @@
 {
   "name": "mystics-magic",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "deploy": "npm run build && wrangler pages deploy ./dist --project-name=mystics-magic"
-  },
-  "devDependencies": {
-    "@astrojs/check": "^0.9.4",
-    "astro": "^7.2.8",
-    "typescript": "^5.9.2",
-    "wrangler": "^4.33.1"
+    "test": "node --test tests/content.test.mjs",
+    "build": "npm test && node scripts/build.mjs",
+    "preview": "npx wrangler pages dev ./dist",
+    "deploy": "npm run build && npx wrangler pages deploy ./dist --project-name=mystics-magic"
   }
 }
