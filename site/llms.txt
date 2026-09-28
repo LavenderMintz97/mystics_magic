@@ -1,0 +1,39 @@
+# Mystics Magic
+
+> Mystics Magic offers online Tarot, Lenormand, and Elder Futhark Rune readings through private Telegram intake, with detailed English reports and clear USD pricing.
+
+## Site
+
+- [Home](https://mystics-magic.pages.dev/)
+- [Services](https://mystics-magic.pages.dev/services/)
+- [Booking](https://mystics-magic.pages.dev/booking/)
+- [Digital Shop](https://mystics-magic.pages.dev/shop/) — temporarily unavailable
+- [Journal](https://mystics-magic.pages.dev/resources/)
+- [About](https://mystics-magic.pages.dev/about/)
+- [Testimonials](https://mystics-magic.pages.dev/testimonials/)
+- [Contact](https://mystics-magic.pages.dev/contact/)
+- [Public Contact Profile](https://linktr.ee/vanessa_97)
+
+## Reading Services
+
+- Mystic Tarot Reading: General Question USD $20; Complex Question USD $45.
+- Lenormand Reading: General Question USD $15; Complex Question USD $20.
+- Rune Elder Futhark Norse Reading: General Question USD $15; Complex Question USD $20.
+- Booking uses service-specific private Telegram intake. A preferred name, reading topic, and focused question may be provided; the question is optional.
+- Reports are delivered within 48 hours after payment is verified.
+- One factual correction is included. Refunds are available only before work begins.
+
+## Digital Products
+
+Digital products are temporarily unavailable. The website does not currently accept digital-product payments or provide purchase links.
+
+## Trust And Editorial Notes
+
+- Readings are for reflection and entertainment, not guaranteed outcomes.
+- Readings are not medical, legal, financial, or mental-health advice.
+- Identifiable closed-order CRM records are retained for 12 months, then anonymized or deleted.
+- Last updated: 2026-09-28.
+
+## AI Crawler Policy
+
+AI crawlers, search engines, and answer engines are allowed to crawl and cite public pages on this site.
